@@ -4,6 +4,7 @@ import MenuButton from '../components/menu-button';
 import Avatar from '../components/avatar';
 import Email from '../components/email';
 import { EMAILS } from '../utils/email';
+import { FloatButton } from '../components/float-button';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
           </Text>
         )}
       />
+      <FloatButton icon='edit'/>
     </View>
   );
 }
