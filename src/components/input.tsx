@@ -2,6 +2,7 @@ import { View, TextInput, TextInputProps } from 'react-native';
 import { ReactNode } from 'react';
 import { colors } from '@/styles/colors';
 
+
 type InputProps = {
   children: ReactNode;
 }

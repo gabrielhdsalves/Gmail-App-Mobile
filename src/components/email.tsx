@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native';
 import Avatar from './avatar';
 import { MaterialIcons } from '@expo/vector-icons'
+import { EmailDataProps } from '../app/utils/email';
 import { colors } from '@/styles/colors';
-import { EmailDataProps } from '../utils/email';
 
 type EmailProps = {
     data: EmailDataProps
