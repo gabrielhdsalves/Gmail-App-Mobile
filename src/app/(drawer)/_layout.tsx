@@ -6,7 +6,6 @@ import { CustomOptions } from '@/types/navigation';
 export default function DrawerLayout() {
   return (
     <Drawer
-      defaultStatus='open'
       screenOptions={{
         headerShown: false,
         drawerStyle: {
@@ -93,7 +92,7 @@ export default function DrawerLayout() {
         }
       />
 
-<Drawer.Screen name='exit-box'
+      <Drawer.Screen name='exit-box'
         options={
           {
             title: "Caixa de Saída",
@@ -104,7 +103,7 @@ export default function DrawerLayout() {
         }
       />
 
-<Drawer.Screen name='sketch'
+      <Drawer.Screen name='sketch'
         options={
           {
             title: "Rascunho",
@@ -115,7 +114,7 @@ export default function DrawerLayout() {
         }
       />
 
-<Drawer.Screen name='all-emails'
+      <Drawer.Screen name='all-emails'
         options={
           {
             title: "Todos os e-mais",
@@ -126,7 +125,7 @@ export default function DrawerLayout() {
         }
       />
 
-<Drawer.Screen name='span'
+      <Drawer.Screen name='span'
         options={
           {
             title: "Spam",
@@ -137,7 +136,7 @@ export default function DrawerLayout() {
         }
       />
 
-<Drawer.Screen name='trash'
+      <Drawer.Screen name='trash'
         options={
           {
             title: "Lixeira",
@@ -147,6 +146,62 @@ export default function DrawerLayout() {
           } as CustomOptions
         }
       />
+
+      <Drawer.Screen name='read'
+        options={
+          {
+            title: "Lidos",
+            iconName: "label-important-outline",
+            sectionTitle: "Marcadores",
+          } as CustomOptions
+        }
+      />
+
+      <Drawer.Screen name='general'
+        options={
+          {
+            title: "Geral",
+            iconName: "label-important-outline",
+            isDividir: true,
+          } as CustomOptions
+        }
+      />
+
+      <Drawer.Screen name='new-marker'
+        options={
+          {
+            title: "Criar Novo",
+            iconName: "add",
+            isDividir: true,
+          } as CustomOptions
+        }
+      />
+
+      <Drawer.Screen name='config'
+        options={
+          {
+            title: "Configurações",
+            iconName: "settings",
+          } as CustomOptions
+        }
+      />
+
+      <Drawer.Screen name='feedback'
+        options={
+          {
+            title: "Feedback",
+            iconName: "feedback",
+          } as CustomOptions
+        }
+      />
+      <Drawer.Screen name='help'
+        options={
+          {
+            title: "Ajuda",
+            iconName: "help-outline",
+          } as CustomOptions
+        }
+      />
     </Drawer>
   );
-}
+} 
