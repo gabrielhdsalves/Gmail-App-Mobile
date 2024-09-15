@@ -28,15 +28,36 @@ export function DrawerContent(drawerProps: DrawerContentComponentProps) {
               return
             }
 
+            const onPress = () => {
+              const event = drawerProps.navigation.emit({
+                type: 'drawerItemPress',
+                canPreventDefault: true,
+                target: route.key,
+              })
+
+              if(!isFocused && !event?.defaultPrevented) {
+                drawerProps.navigation.navigate(route.name, route.params)
+              }
+            }
+
+            
+
           
 
             return (
               <View key={route.key} className="w-full">
-              
+              { options.sectionTitle && (
+                <Text className='text-gray-400 text-sm font-heading uppercase ml-4 mt-6'> 
+                  {options.sectionTitle}
+                </Text>
+              )
+              }
                 <DrawerButton
+                  onPress={onPress}
                   title={options.title}
                   iconNome={options.iconName}
                   isDividir={options.isDividir}
+                  notifications={options.notifications}
                   isFocused={isFocused}
                 />
               </View>
