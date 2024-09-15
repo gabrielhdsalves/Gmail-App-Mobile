@@ -7,7 +7,6 @@ Project images:
 <div align="center">
    <img src="assets/Screenshot_1.png" width="200">
    <img src="assets/Screenshot_2.png" width="200">
-  
 </div>
 
 ## Technologies Used
